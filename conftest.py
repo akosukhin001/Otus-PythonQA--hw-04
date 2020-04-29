@@ -30,4 +30,5 @@ def pytest_addoption(parser):
 def url_param(request):
     url = request.config.getoption('--url')
     status_code = request.config.getoption('--status_code')
-    return {'url': url, 'status_code': status_code}
+    # return {'url': url, 'status_code': status_code}  # Вариант передачи аргументов в тестовую ф-ю через словарь.
+    return url, status_code
